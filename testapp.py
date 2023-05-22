@@ -2,10 +2,9 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-
-# Load your trained model
 from tensorflow.keras.models import load_model
 
+# Load your trained model
 model = load_model('models/age_regression_model.h5')
 
 st.title('Age Prediction App')
@@ -29,4 +28,3 @@ if uploaded_file is not None:
 
     # Show the predicted age
     st.markdown(f"# Predicted Age: {age}")
-
